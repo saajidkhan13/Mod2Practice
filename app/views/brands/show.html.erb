@@ -1,0 +1,27 @@
+<h1>SHOW ME THE BRAND</h1>
+
+
+<h2>Brand Name:</h2>
+<%= @brand.name %>
+<br>
+<h2>Roster Amount:</h2>
+<%= @brand.roster %>
+<br>
+<h2>Characters</h2>
+<% @brand.wrestlers.each do |wrestler| %>
+<%= link_to wrestler.name, wrestler_path(wrestler) %>
+<br>
+<% end %>
+
+<br>
+<br>
+<br>
+<%= link_to "Edit", edit_brand_path(@brand) %>
+<br>
+<br>
+<br>
+<%= link_to "Delete", brand_path(@brand), method: :delete %>
+<br>
+<br>
+<br>
+<%= link_to "Back", brands_path %>

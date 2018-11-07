@@ -1,0 +1,16 @@
+<h1>ALL THE WRESTLERS</h1>
+
+<% @wrestlers.each do |w| %>
+<%= link_to w.name, wrestler_path(w) %>
+<br>
+<br>
+<% end %>
+<br>
+<br>
+<br>
+<br>
+<%= link_to "New Wrestler", new_wrestler_path %>
+<br>
+<br>
+<br>
+<%= link_to "Brands", brands_path %>

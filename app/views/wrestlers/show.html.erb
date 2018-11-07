@@ -1,0 +1,25 @@
+<h1>WRESTLER INFORMATION PAGE</h1>
+
+<label>Name:</label>
+<%= @wrestler.name %>
+<br>
+<br>
+<label>Weight:</label>
+<%= @wrestler.weight %>
+<br>
+<br>
+<label>Champion?:</label>
+<%= @wrestler.champion %>
+<br>
+<br>
+<label>Brand:</label>
+<%= @wrestler.brand_id %>
+<br>
+<br>
+<%= link_to "Edit", edit_wrestler_path(@wrestler) %>
+<br>
+<br>
+<%= link_to "Delete", wrestler_path(@wrestler), method: :delete %>
+<br>
+<br>
+<%= link_to "Back", wrestlers_path %>
